@@ -1,0 +1,41 @@
+<body>
+<div class="col">
+    <h2>Ajouter un item</h2>
+    <input type="text" id="produit" placeholder="Nom du produit"/><br>
+    <input type="number" id="nombre" placeholder="Nombre d'articles"/><br>
+    <input type="number" id="nombre" placeholder="Prix" /><br>
+    <button onclick="add">Ajouter</button>
+</div>
+<div class="col">
+    <h2>Liste</h2>
+    <ul id="Liste">
+        <li>Produit - 3 - 3€</li>
+    </ul>
+</body>
+
+<script type="text/javascript">
+// Tableau à deux dimensions
+var liste = [["Pommes", 10, 30]], ["Cerises", 1, 2], ["Salades", 1, 20]];"
+var displayListe = document.getElementById("liste");
+var affichageTotal = document.getElementById("total");
+var produit = getElementById("produit");
+var calculTotal = 0;{}
+
+function add(){
+var nouveauProduit = liste.push([produit.value, nombre.value, prix.value]);
+
+//Afficher mes produits et calcul du total
+for (var i=0; i < liste.lenght; i++){
+    //Affichage des articles
+    displayListe.innerHTML += "<li>Nom:"+liste[i][0]+" -Nombre:"+liste[i][1]+" - Prix "+liste[i][2]+"</li>";
+       Prix: "+liste[i][2]+"<button onclick='supprimer("+i+")'>Suprimer</button></li>";"
+    //Calcul du total à chaque article
+        calculTotal += parseFloat(liste[i][2]);
+};
+}
+ functio supprimer(id) {
+     //alert('test supprime :'+id);
+     var supprimeProduit = liste.splice(id, 1);
+ };
+affichageTotal.innerHTML = calculTotal;
+</script>
